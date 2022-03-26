@@ -12,7 +12,6 @@
 <script>
 import { VeLine } from '../../src/index.es'
 import { LINE_DATA } from '../test/data'
-import 'echarts/lib/component/dataZoom'
 export default {
   data () {
     this.chartDataZoom = [{

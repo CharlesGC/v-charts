@@ -40,22 +40,6 @@
     <ve-line :data="chartData" :toolbox="toolbox"></ve-line>
     title
     <ve-line :data="chartData" :title="title"></ve-line>
-    others
-    <ve-line
-      :legend="legend"
-      :x-axis="xAxis"
-      :y-axis="yAxis"
-      :radar="radar"
-      :tooltip="tooltip"
-      :axis-pointer="axisPointer"
-      :brush="brush"
-      :geo="geo"
-      :timeline="timeline"
-      :graphic="graphic"
-      :series="series"
-      :text-style="textStyle"
-      :after-config="afterConfig">
-    </ve-line>
   </div>
 </template>
 
@@ -95,18 +79,6 @@ export default {
         fontWeight: 'normal'
       }
     }
-    this.legend = {}
-    this.xAxis = {}
-    this.yAxis = {}
-    this.radar = {}
-    this.tooltip = {}
-    this.axisPointer = {}
-    this.brush = {}
-    this.geo = {}
-    this.timeline = {}
-    this.graphic = {}
-    this.series = {}
-    this.textStyle = {}
     return {
       chartData: LINE_DATA
     }
