@@ -1,6 +1,19 @@
-import echartsLib from 'echarts/lib/echarts'
-import 'echarts/lib/component/tooltip'
-import 'echarts/lib/component/legend'
+import * as echartsLib from 'echarts/lib/echarts'
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  TransformComponent,
+  VisualMapComponent,
+  DataZoomComponent,
+  ToolboxComponent
+} from 'echarts/components'
+// 标签自动布局，全局过渡动画等特性
+import { LabelLayout, UniversalTransition } from 'echarts/features'
+// 引入 Canvas 渲染器，注意引入 CanvasRenderer 或者 SVGRenderer 是必须的一步
+import { CanvasRenderer } from 'echarts/renderers'
+
 import numerify from 'numerify'
 import {
   getType,
@@ -14,6 +27,7 @@ import {
 
 import Loading from './components/loading'
 import DataEmpty from './components/data-empty'
+
 import {
   DEFAULT_COLORS,
   DEFAULT_THEME,
@@ -23,6 +37,21 @@ import {
 import setExtend from './modules/extend'
 import setMark from './modules/mark'
 import setAnimation from './modules/animation'
+
+// 注册必须的组件
+echartsLib.use([
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  TransformComponent,
+  LabelLayout,
+  UniversalTransition,
+  VisualMapComponent,
+  DataZoomComponent,
+  ToolboxComponent,
+  CanvasRenderer
+])
 
 export default {
   render (h) {

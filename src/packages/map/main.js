@@ -1,4 +1,4 @@
-import echarts from 'echarts/lib/echarts'
+import * as echartsLib from 'echarts/lib/echarts'
 import { itemPoint } from '../../constants'
 import { getMapJSON, getFormated } from '../../utils'
 
@@ -125,7 +125,7 @@ function registerMap (args, mapOrigin) {
       mapOrigin = beforeRegisterMapOnce(mapOrigin)
     }
     _once[registerSign] = true
-    echarts.registerMap(position, mapOrigin, specialAreas)
+    echartsLib.registerMap(position, mapOrigin, specialAreas)
   }
 }
 
@@ -151,7 +151,7 @@ export const map = (columns, rows, settings, extra) => {
     positionJsonLink,
     beforeRegisterMap,
     beforeRegisterMapOnce,
-    mapURLProfix = 'https://unpkg.com/echarts@3.6.2/map/json/',
+    mapURLProfix = 'https://unpkg.com/echarts@4.9.0/map/json/',
     specialAreas = {}
   } = settings
   let mapOrigin = settings.mapOrigin

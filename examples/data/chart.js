@@ -1,5 +1,5 @@
 export default {
-  name: '图',
+  name: '图表类型',
   type: 'chart',
   data: [
     {

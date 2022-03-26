@@ -1,6 +1,6 @@
 import { itemPoint, HEAT_MAP_COLOR, HEAT_BMAP_COLOR } from '../../constants'
 import { getBmap, getAmap, getMapJSON, getFormated } from '../../utils'
-import echarts from 'echarts/lib/echarts'
+import * as echartsLib from 'echarts/lib/echarts'
 
 function getAxisList (rows, label) {
   const result = []
@@ -127,7 +127,7 @@ export const heatmap = (columns, rows, settings, status) => {
     yAxisName,
     xAxisName,
     beforeRegisterMapOnce,
-    mapURLProfix = 'https://unpkg.com/echarts@3.6.2/map/json/',
+    mapURLProfix = 'https://unpkg.com/echarts@4.9.0/map/json/',
     specialAreas = {}
   } = settings
   const { tooltipVisible } = status
@@ -203,7 +203,7 @@ export const heatmap = (columns, rows, settings, status) => {
     }).then(json => {
       const geoAttr = Object.assign({ map: position }, geo)
       if (beforeRegisterMap) json = beforeRegisterMap(json)
-      echarts.registerMap(position, json, specialAreas)
+      echartsLib.registerMap(position, json, specialAreas)
       return Object.assign({ geo: geoAttr }, options)
     })
   } else if (type === 'amap') {

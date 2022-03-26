@@ -24,7 +24,11 @@
   -->
   <div>
     grid backgroundColor
-    <ve-line :data="chartData" :grid="chartGrid" background-color="#eee"></ve-line>
+    <ve-line
+      :data="chartData"
+      :grid="chartGrid"
+      background-color="#eee"
+    ></ve-line>
     <ve-line :data="chartData" :grid="chartGrid1"></ve-line>
     colors
     <ve-line :data="chartData" :colors="chartColors"></ve-line>
@@ -58,10 +62,6 @@
 <script>
 import { VeLine } from '../../src/index.es'
 import { LINE_DATA } from './data'
-import 'echarts/lib/component/visualMap'
-import 'echarts/lib/component/dataZoom'
-import 'echarts/lib/component/toolbox'
-import 'echarts/lib/component/title'
 
 export default {
   data () {
@@ -120,4 +120,3 @@ export default {
   components: { VeLine }
 }
 </script>
-
