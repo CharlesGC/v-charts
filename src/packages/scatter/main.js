@@ -98,7 +98,8 @@ function getScatterSeries (args) {
     symbolSize,
     symbolRotate,
     symbolOffset,
-    cursor
+    cursor,
+    showEffect = []
   } = args
   const extraMetrics = columns.filter(column => {
     return !~metrics.indexOf(column) && column !== dimension
@@ -134,6 +135,26 @@ function getScatterSeries (args) {
       cursor
     })
   })
+  if (showEffect.length !== 0) {
+    showEffect.forEach(item => {
+      const result = []
+      const itemResult = { value: [] }
+      itemResult.value.push(item[dimension], item[metrics[0]], item[metrics[1]])
+      itemResult.symbolSize = symbolSize || (item[metrics[1]] / maxNum) * symbolSizeMax
+      result.push(itemResult)
+      series.push({
+        type: 'effectScatter',
+        data: result,
+        name: '',
+        label,
+        itemStyle,
+        symbol,
+        symbolRotate,
+        symbolOffset,
+        cursor
+      })
+    })
+  }
   return series
 }
 
@@ -160,7 +181,8 @@ const scatter = (columns, rows, settings, extra) => {
     max,
     scale,
     label,
-    itemStyle
+    itemStyle,
+    showEffect
   } = settings
 
   if (isArray(rows)) {
@@ -231,7 +253,8 @@ const scatter = (columns, rows, settings, extra) => {
     symbolSize,
     symbolRotate,
     symbolOffset,
-    cursor
+    cursor,
+    showEffect
   })
   return { legend, tooltip, xAxis, yAxis, series }
 }
