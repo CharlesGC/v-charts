@@ -25,22 +25,23 @@
 
 <script>
 import VeBar from '../../src/packages/bar'
-import VeLine from '../../src/packages/line'
-import VeHistogram from '../../src/packages/histogram'
-import VePie from '../../src/packages/pie'
-import VeRing from '../../src/packages/ring'
-import VeWaterfall from '../../src/packages/waterfall'
-import VeFunnel from '../../src/packages/funnel'
-import VeRadar from '../../src/packages/radar'
-import VeChart from '../../src/packages/chart'
-import VeMap from '../../src/packages/map'
-import VeSankey from '../../src/packages/sankey'
-import VeHeatmap from '../../src/packages/heatmap'
-import VeScatter from '../../src/packages/scatter'
+import VeBoxplot from '../../src/packages/boxplot'
 import VeCandle from '../../src/packages/candle'
+import VeChart from '../../src/packages/chart'
+import VeFunnel from '../../src/packages/funnel'
 import VeGauge from '../../src/packages/gauge'
-import VeTree from '../../src/packages/tree'
+import VeHeatmap from '../../src/packages/heatmap'
+import VeHistogram from '../../src/packages/histogram'
+import VeLine from '../../src/packages/line'
 import VeLiquidfill from '../../src/packages/liquidfill'
+import VeMap from '../../src/packages/map'
+import VePie from '../../src/packages/pie'
+import VeRadar from '../../src/packages/radar'
+import VeRing from '../../src/packages/ring'
+import VeSankey from '../../src/packages/sankey'
+import VeScatter from '../../src/packages/scatter'
+import VeTree from '../../src/packages/tree'
+import VeWaterfall from '../../src/packages/waterfall'
 import VeWordcloud from '../../src/packages/wordcloud'
 import CHART_DATA from '../data'
 
@@ -73,6 +74,7 @@ export default {
 
   components: {
     VeBar,
+    VeBoxplot,
     VeLine,
     VeHistogram,
     VePie,

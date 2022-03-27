@@ -1,4 +1,5 @@
 import bar from './bar'
+import boxplot from './boxplot'
 import histogram from './histogram'
 import line from './line'
 import pie from './pie'
@@ -19,6 +20,7 @@ import wordcloud from './wordcloud'
 
 export default {
   bar,
+  boxplot,
   histogram,
   line,
   pie,
