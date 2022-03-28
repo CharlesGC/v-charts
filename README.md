@@ -45,6 +45,9 @@
 
 > Chart components based on Vue2.x and Echarts
 
+# Major upgrade
+此版本升级了依赖echarts的版本，由v4升级到了v5，仅供内部使用
+
 ## Features
 - **Uniform data format:** Use an uniform data format that both convient for frontend and backend, and also easy to create and edit.
 - **Simplified configuration:** With simplified configuration items, complex requirements can be easily implemented.
